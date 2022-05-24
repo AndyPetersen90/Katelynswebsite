@@ -1,0 +1,53 @@
+body, html {
+    margin:0px;
+    padding:0px;
+    font-family: 'Emilys Candy', cursive;
+    background-color: #FAF0D7;
+}
+
+.page-header {
+    position: fixed;
+    width: 1440px;
+    height: 140px;
+    top: 0px;
+    background-color: #FF6FB5;
+    font-size:xx-large;
+    text-align: center;
+    border-radius: 10%;
+
+}
+
+
+
+nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 191px;
+    height: 884px;
+    right: 0%;
+    top: 20%;
+}
+
+.main-photo {
+    position: absolute;
+    margin:0px;
+    padding:0px;
+    border:0px;
+    width: 42%;
+    height: auto;
+    top: 20%;
+    left: 5%;
+}
+
+.biography{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+}
+
+.work-location {
+    position: absolute;
+    top: 80%;
+    left:5%;
+}
