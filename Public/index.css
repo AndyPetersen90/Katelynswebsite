@@ -73,6 +73,51 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     top: 15%;
+    left: 5%;
 
+}
+
+.portfolio-filtering {
+    position: absolute;
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+    top: 12%;
+    left: 23%;
+    
+}
+
+.portfolio-categories {
+    font-size: 30px;
+    font-family: 'Emilys Candy', cursive;
+    margin: 0px;
+    padding: 0px;
+}
+
+.request-information-section{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 10%
+}
+
+.request-information-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    top: 15%;
+}
+
+.submit-ideas {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 25%
+}
+
+.submit-idea-form {
+    display: flex;
+    flex-direction: column;
 }
 
