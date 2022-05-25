@@ -17,3 +17,5 @@ const {} = require('./controller.js')
 
 
 app.post('/seed', seed)
+
+app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
