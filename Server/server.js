@@ -6,5 +6,14 @@ const express = require('express')
 const app = express()
 const path = require('path');
 const {SERVER_PORT} = process.env
-// const {seed} = require('./seed.js')
+const {seed} = require('./seed.js')
 const {} = require('./controller.js')
+
+
+
+
+
+
+
+
+app.post('/seed', seed)
