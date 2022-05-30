@@ -53,28 +53,24 @@ nav {
     left: 5%;
 }
 
-.biography{
-    position: absolute;
-    top: 20%;
-    left: 60%;
-}
-
 .work-location {
     position: absolute;
+    font-size: xx-large;
     top: 80%;
-    left:5%;
+    left: 15%;
+}
+
+.biography{
+    position: absolute;
+    font-size: xx-large;
+    top: 20%;
+    left: 55%;
+    max-width: 30%;
 }
 
 .instagram-images {
-    position: absolute;
-    margin:0px;
-    padding:0px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    top: 15%;
+    top: 18%;
     left: 5%;
-
 }
 
 .portfolio-filtering {
@@ -82,10 +78,10 @@ nav {
     font-size: 30px;
     margin: 0px;
     padding: 0px;
-    top: 12%;
-    left: 23%;
-    
+    top: 13%;
+    left: 30%;
 }
+
 
 .portfolio-categories {
     font-size: 30px;
@@ -94,26 +90,40 @@ nav {
     padding: 0px;
 }
 
-.request-information-section{
-    position: absolute;
-    margin: 0px;
-    padding: 0px;
-    top: 10%
+#main, #winter, #spring, #summer, #fall {
+    margin:0px;
+    padding:0px;
+    visibility: hidden;
+    max-height: 1px;
 }
 
-.request-information-form {
+.main, .winter, .spring, .summer, .fall {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-    top: 15%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+.input-fields {
+    margin: auto;
+    margin-top: 10%;
+    width: 50%;
+    padding: 10px;
 }
 
 .submit-ideas {
-    position: absolute;
+    position: relative;
     margin: 0px;
     padding: 0px;
-    top: 25%
+}
+
+.share-title {
+    text-align: center;
+    font-size: xx-large;
 }
 
 .submit-idea-form {
@@ -121,3 +131,39 @@ nav {
     flex-direction: column;
 }
 
+.share-name-field, .photo-url-field, .share-comments-field, .share-button {
+    text-align: center;
+    font-size: x-large;
+}
+
+.user-posted-photos {
+    position: absolute;
+    margin-top: auto;
+    max-width: 80%;
+    padding: 15px;
+    left: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.user-posts {
+    padding: 15px;
+    margin: 3px;
+    border: 5px;
+    width:fit-content;
+    max-width: 300px;
+    border-style: double;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.shared-photo {
+    margin: auto;
+}
+
+.poster-name, .user-comments {
+    text-align: center;
+    font-size: x-large;
+}

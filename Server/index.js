@@ -8,27 +8,19 @@ const cors = require('cors')
 const path = require('path');
 const {SERVER_PORT} = process.env
 const {seed} = require('./seed.js')
-const {getPortfolioMain, getPortfolioSpring, getPortfolioSummer, getPortfolioWinter, getPortfolioFall} = require('./controller.js')
+const {getPosts, createPost, deletePost} = require('./controller.js')
 
 
 app.use(express.json())
 app.use(cors())
 
 //portfolio requests//
-app.get('/portfolio_main', getPortfolioMain);
-app.get('/portfolio_winter', getPortfolioWinter);
-app.get('/portfolio_spring', getPortfolioSpring);
-app.get('/portfolio_summer', getPortfolioSummer);
-app.get('/portfolio_fall', getPortfolioFall);
-
-
 
 
 //contact requests//
-
-
-
-
+app.get('/posts', getPosts);
+app.post('/posts', createPost);
+app.delete(`/posts/:id`, deletePost)
 
 //server//
 app.post('/seed', seed)

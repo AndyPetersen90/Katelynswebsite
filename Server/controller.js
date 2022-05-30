@@ -16,64 +16,42 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
 
-    getPortfolioMain: (req, res) => {
-        sequelize.query(`SELECT * FROM portfolio_main`)
+    getPosts: (req, res) => {
+        sequelize.query(`SELECT * FROM posts`)
         .then((dbRes) => {
             res.status(200).send(dbRes[0])
-            console.log(dbRes[0])
         })
         .catch((err) => {
-            console.error(err)
+            console.log(err);
         })
     },
 
-    getPortfolioWinter: (req, res) => {
-        sequelize.query(`
-        SELECT * FROM portfolio_winter`)
+    createPost: (req, res) => {
+        console.log(req.body);
+        const {name, url, comments} = req.body;
+
+        sequelize.query(`INSERT INTO posts(name, url, comments)
+            VALUES ('${name}', '${url}', '${comments}')
+            RETURNING *;`)
         .then((dbRes) => {
             res.status(200).send(dbRes[0])
         })
         .catch((err) => {
-            console.error(err)
+            console.log(err)
         })
     },
 
-    getPortfolioSpring: (req, res) => {
-        sequelize.query(`
-        SELECT * FROM portfolio_spring`)
+    deletePost: (req, res) => {
+        console.log(req.params)
+        sequelize.query(
+            `DELETE
+            FROM posts
+            WHERE post_id = '${req.params.id}'`)
         .then((dbRes) => {
-            res.status(200).send(dbRes[0])
+            res.status(200).send(dbRes[0]);
         })
         .catch((err) => {
-            console.error(err)
-        })
-    },
-
-    getPortfolioSummer: (req, res) => {
-        sequelize.query(`
-        SELECT * FROM portfolio_summer`)
-        .then((dbRes) => {
-            res.status(200).send(dbRes[0])
-        })
-        .catch((err) => {
-            console.error(err)
-        })
-    },
-
-    getPortfolioFall: (req, res) => {
-        sequelize.query(`
-        SELECT * FROM portfolio_fall`)
-        .then((dbRes) => {
-            res.status(200).send(dbRes[0])
-        })
-        .catch((err) => {
-            console.error(err)
+            console.log(err)
         })
     }
-
-
-
-
-
-
 }
