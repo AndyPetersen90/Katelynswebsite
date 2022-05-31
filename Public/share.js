@@ -18,11 +18,16 @@ function getPosts() {
                     <h3 class="poster-name">${post.name}</h3>
                     <img class="shared-photo" src="${post.url}">
                     <p class="user-comments">${post.comments}</p>
-                    <form><button class="delete-button">Delete Post</button></form>
+                    <button onclick="deleteSharedPost(${post.post_id})" class="delete-button">Delete Post</button>
                 </div>`
-
+                
                 posted.innerHTML += postElem 
             })
+            
+            // const sharedPost = document.getElementsByClassName('delete-button');
+            // for (let i = 0; i < sharedPost.length; i++) {
+            //     sharedPost[i].addEventListener('click', deleteSharedPost);
+            // }
 
         })
         .catch(err => {
@@ -55,15 +60,16 @@ makingAPost.addEventListener('submit', (e) => {
 })
 resetFormValues()
 
-const sharedPost = document.getElementsByClassName('delete-button');
 
-sharedPost.addEventListener('submit', (e) => {
-    e.preventDefault()
+function deleteSharedPost(id) {
+    console.log('function hit')
 
-    console.log("attempted delete")
-    
-    axios.delete(`${localhost}/posts/:${id}`)
-    .then(() => getPosts())
+    axios.delete(`${localhost}/posts/${id}`)
+    .then(() => {
+        console.log('then received')
+        location.reload(true);
+    })
     .catch(err => console.log(err))
-});
+}
+
 

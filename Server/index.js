@@ -20,7 +20,7 @@ app.use(cors())
 //contact requests//
 app.get('/posts', getPosts);
 app.post('/posts', createPost);
-app.delete(`/posts/:id`, deletePost)
+app.delete('/posts/:id', deletePost)
 
 //server//
 app.post('/seed', seed)

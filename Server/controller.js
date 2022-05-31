@@ -43,10 +43,12 @@ module.exports = {
 
     deletePost: (req, res) => {
         console.log(req.params)
+        const {id} = req.params;
+
         sequelize.query(
             `DELETE
             FROM posts
-            WHERE post_id = '${req.params.id}'`)
+            WHERE post_id = '${id}'`)
         .then((dbRes) => {
             res.status(200).send(dbRes[0]);
         })
