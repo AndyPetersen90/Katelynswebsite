@@ -25,4 +25,8 @@ app.delete('/posts/:id', deletePost)
 //server//
 app.post('/seed', seed)
 
-app.listen(SERVER_PORT, () => console.log(`up on ${SERVER_PORT}`))
+const port = process.env.PORT || 5005
+
+app.listen(port, () => {
+    console.log(`Listening on ${port}`)
+})
