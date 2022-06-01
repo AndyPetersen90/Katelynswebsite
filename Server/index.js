@@ -10,6 +10,9 @@ const {SERVER_PORT} = process.env
 const {seed} = require('./seed.js')
 const {getPosts, createPost, deletePost} = require('./controller.js')
 
+app.use(express.json())
+app.use(cors())
+
 app.use("/", express.static(path.join(__dirname, "../Public")));
 
 app.get("/", (req, res) => {
@@ -34,9 +37,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/share.js"))
 })
 
-
-app.use(express.json())
-app.use(cors())
 
 
 //contact requests//
