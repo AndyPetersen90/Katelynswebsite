@@ -1,6 +1,3 @@
-//This file will be for writing out the axios requests from the
-//contact page that we will be sending to the backend.
-
 
 const posted = document.querySelector('.user-posted-photos');
 const makingAPost = document.querySelector('.submit-idea-form')
@@ -35,7 +32,6 @@ function getPosts() {
 }
 getPosts()
 
-
 const postName = document.querySelector('.share-name-field');
 const postURL = document.querySelector('.photo-url-field');
 const postComments = document.querySelector('.share-comments-field');
@@ -59,11 +55,10 @@ makingAPost.addEventListener('submit', (e) => {
 })
 resetFormValues()
 
-
 function deleteSharedPost(id) {
     console.log('function hit')
 
-    axios.delete(`${localhost}/posts/${id}`)
+    axios.delete(`/posts/${id}`)
     .then(() => {
         console.log('then received')
         location.reload(true);

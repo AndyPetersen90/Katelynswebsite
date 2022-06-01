@@ -1,5 +1,3 @@
-//Here we receive the axios requests and direct them to the correct
-//function in the controller file.
 
 const express = require('express')
 const cors = require('cors')
@@ -27,8 +25,6 @@ app.get("/share", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/share.html"))
 })
 
-
-
 //contact requests//
 app.get('/posts', getPosts);
 app.post('/posts', createPost);
@@ -37,8 +33,8 @@ app.delete('/posts/:id', deletePost)
 //server//
 app.post('/seed', seed)
 
-const port = process.env.PORT || 5005
 
+const port = process.env.PORT || 5005
 app.listen(port, () => {
     console.log(`Listening on ${port}`)
 })
