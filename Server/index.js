@@ -10,11 +10,32 @@ const {SERVER_PORT} = process.env
 const {seed} = require('./seed.js')
 const {getPosts, createPost, deletePost} = require('./controller.js')
 
+app.use("/", express.static(path.join(__dirname, "../public")));
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"))
+})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/portfolio.html"))
+})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.css"))
+})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/services.html"))
+})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/share.html"))
+})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/portfolio.js"))
+})
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/share.js"))
+})
 
 app.use(express.json())
 app.use(cors())
-
-//portfolio requests//
 
 
 //contact requests//
