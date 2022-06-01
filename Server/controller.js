@@ -9,7 +9,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {
-            rejectUnauthorized: false //normally this will be set to true
+            rejectUnauthorized: false 
         }
     }
 })
