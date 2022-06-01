@@ -20,21 +20,12 @@ app.get("/home", (req, res) => {
 app.get("/portfolio", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/portfolio.html"))
 })
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../Public/index.css"))
-// })
 app.get("/services", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/services.html"))
 })
 app.get("/share", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/share.html"))
 })
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../Public/portfolio.js"))
-// })
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../Public/share.js"))
-// })
 
 
 
