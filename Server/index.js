@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/share.js"))
 })
 
+
 app.use(express.json())
 app.use(cors())
 
