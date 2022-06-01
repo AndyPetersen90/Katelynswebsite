@@ -14,21 +14,21 @@ app.use(cors())
 
 app.use("/", express.static(path.join(__dirname, "../Public")));
 
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../Public/index.html"))
-// })
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../Public/portfolio.html"))
-// })
+app.get("/home", (req, res) => {
+    res.sendFile(path.join(__dirname, "../Public/index.html"))
+})
+app.get("/portfolio", (req, res) => {
+    res.sendFile(path.join(__dirname, "../Public/portfolio.html"))
+})
 // app.get("/", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../Public/index.css"))
 // })
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../Public/services.html"))
-// })
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, "../Public/share.html"))
-// })
+app.get("/services", (req, res) => {
+    res.sendFile(path.join(__dirname, "../Public/services.html"))
+})
+app.get("/share", (req, res) => {
+    res.sendFile(path.join(__dirname, "../Public/share.html"))
+})
 // app.get("/", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../Public/portfolio.js"))
 // })
