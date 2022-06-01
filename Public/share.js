@@ -1,14 +1,13 @@
 //This file will be for writing out the axios requests from the
 //contact page that we will be sending to the backend.
 
-const localhost = 'http://localhost:5500';
 
 const posted = document.querySelector('.user-posted-photos');
 const makingAPost = document.querySelector('.submit-idea-form')
 
 
 function getPosts() {
-    axios.get(`${localhost}/posts`)
+    axios.get(`/posts`)
         .then(res => {
             res.data.forEach(post => {
                 console.log(post)
@@ -50,7 +49,7 @@ makingAPost.addEventListener('submit', (e) => {
 
     console.log(postName);
 
-    axios.post(`${localhost}/posts`, {name: postName.value, url: postURL.value, comments: postComments.value})
+    axios.post(`/posts`, {name: postName.value, url: postURL.value, comments: postComments.value})
     .then(() => {
         resetFormValues()
         location.reload()

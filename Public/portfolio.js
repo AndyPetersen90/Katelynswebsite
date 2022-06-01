@@ -1,7 +1,6 @@
 //Here we will be creating our axios requests from the portfolio page
 //that we will send to the backend.
 
-const localhost = 'http://localhost:5500';
 
 const mainPortfolio = document.getElementsByClassName('main-portfolio');
 
