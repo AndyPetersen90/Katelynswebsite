@@ -10,7 +10,7 @@ require('dotenv').config()
 app.use(express.json())
 app.use(cors())
 
-app.use("/", express.static(path.join(__dirname, "../Public")));
+app.use("/", express.static(path.join(__dirname, "../")));
 
 app.get("/home", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/index.html"))
