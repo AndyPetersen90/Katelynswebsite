@@ -17,7 +17,6 @@
     "url": "https://github.com/AndyPetersen90/Katelynswebsite/issues"
   },
   "homepage": "https://github.com/AndyPetersen90/Katelynswebsite#readme",
-  "description": "",
   "dependencies": {
     "axios": "^0.27.2",
     "cors": "^2.8.5",
@@ -29,5 +28,6 @@
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.20.1"
-  }
+  },
+  "description": ""
 }
