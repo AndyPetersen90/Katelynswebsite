@@ -1,9 +1,10 @@
 {
   "name": "katelynwebsite",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,6 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "heroku": "^7.60.2",
-    "init": "^0.1.2",
     "nodemon": "^2.0.16",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
