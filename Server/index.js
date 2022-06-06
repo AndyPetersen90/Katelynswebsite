@@ -34,7 +34,12 @@ app.delete('/posts/:id', deletePost)
 app.post('/seed', seed)
 
 
-const port = process.env.PORT || 5005
-app.listen(port, () => {
-    console.log(`Listening on ${port}`)
-})
+// const port = process.env.PORT || 5005
+
+// app.listen(port, () => {
+//     console.log(`Listening on ${port}`)
+// })
+
+app.listen(process.env.PORT || 5005, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
