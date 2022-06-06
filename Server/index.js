@@ -24,6 +24,9 @@ app.get("/services", (req, res) => {
 app.get("/share", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/share.html"))
 })
+app.get("/favicon", (req, res) => {
+    res.sendFile(path.join(__dirname, "../Public/favicon.ico"))
+})
 
 //contact requests//
 app.get('/posts', getPosts);
