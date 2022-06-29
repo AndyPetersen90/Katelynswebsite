@@ -4,6 +4,8 @@ const cors = require('cors')
 const path = require('path');
 const app = express()
 const {seed} = require('./seed.js')
+const sharejs = require('../Public/share')
+const portfoliojs = require('../Public/portfolio')
 const {getPosts, createPost, deletePost} = require('./controller.js')
 
 require('dotenv').config()
@@ -18,11 +20,17 @@ app.get("/home", (req, res) => {
 app.get("/portfolio", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/portfolio.html"))
 })
+app.get("/portfoliojs", (req, res) => {
+    res.sendFile(path.join(__dirname, portfoliojs))
+})
 app.get("/services", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/services.html"))
 })
 app.get("/share", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/share.html"))
+})
+app.get("/sharejs", (req, res) => {
+    res.sendFile(path.join(__dirname, sharejs))
 })
 app.get("/favicon", (req, res) => {
     res.sendFile(path.join(__dirname, "../Public/favicon.ico"))
