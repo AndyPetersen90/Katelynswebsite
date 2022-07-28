@@ -42,6 +42,10 @@ app.post("/seed", seed);
 //     console.log(`Listening on ${port}`)
 // })
 
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
+
 app.listen(process.env.PORT || 5005, function () {
   console.log(
     "Express server listening on port %d in %s mode",
