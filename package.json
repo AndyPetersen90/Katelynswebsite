@@ -4,7 +4,8 @@
   "main": "./server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./server/index.js"
+    "go": "react-scripts start",
+    "start": "node ./server/index.js && npm build"
   },
   "repository": {
     "type": "git",
